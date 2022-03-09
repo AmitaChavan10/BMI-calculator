@@ -1,0 +1,65 @@
+<!doctype html>
+<!-- If multi-language site, reconsider usage of html lang declaration here. -->
+<html lang="en"> 
+
+<head>
+  <meta charset="utf-8">
+  <title>BMI calculator</title>
+  <!-- View-port Basics: http://mzl.la/VYREaP -->
+  <!-- This meta tag is used for mobile device to display the page without any zooming,
+       so how much the device is able to fit on the screen is what's shown initially. 
+       Remove comments from this tag, when you want to apply media queries to the website. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- Place favicon.ico in the root directory: mathiasbynens.be/notes/touch-icons -->
+  <link rel="shortcut icon" href="favicon.ico" />
+  <!--font-awesome link for icons-->
+  <link rel="stylesheet" media="screen" href="assets/vendor/font-awesome/css/all.min.css" >
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
+  <link rel="stylesheet" media="screen" href="assets/css/style.css" >
+</head>
+
+<body>
+  <!--container start-->
+  <div class="container">
+    <section class="calc">
+      <h1 class="bmi">body mass index(BMI)</h1>
+      <div class="wrapper">
+        <form id="form" class="form" onsubmit="return false">
+          <div class="form-groups">
+            <div class="form-group">
+              <label class="value w-bmi">weight:</label>
+              <input type="text" class="weight" id="weight" name="weight" placeholder="0">
+              <small>kg</small>
+            </div>
+            <div class="form-group">
+              <label class="value h-bmi">height:</label>
+              <input type="text" class="height" id="height" name="height" placeholder="0">
+              <small>ft</small>
+            </div>
+            <div class="form-group">
+              <label class="result">your bmi:</label>
+              <input type="number" class="result" id="result" name="result" placeholder="0">
+            </div>
+            <div class="form-control">
+              <button type="submit" class="btn" id="btn">calculate</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="status">
+        <div class="contain-status">
+          <ul>
+            <li><h2>under-weight</h2><h3><18</h3></li>
+            <li><h2>normal</h2><h3>18.5 - 25</h3></li>
+            <li><h2>over-weight</h2><h3>25-30</h3></li>
+            <li><h2>obese</h2><h3>>30</h3></li>
+          </ul>
+        </div>
+    </section>
+  </div>
+  <!--container end-->
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
